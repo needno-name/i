@@ -1,1 +1,5 @@
-{}
+{
+  "readableLineLength": false,
+  "defaultViewMode": "preview",
+  "showFrontmatter": true
+}
