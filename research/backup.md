@@ -82,6 +82,7 @@ Promising:
 - [Borgbackup](https://www.borgbackup.org/)
 - [Restic](https://restic.net)
 - [libarchive](https://www.libarchive.org/)
+- [storj](https://www.storj.io/)
 
 Used before:
 - Unison
