@@ -15,12 +15,15 @@ Favorable system properties:
 - multiplatform
 	- especially mobile client (autouploader)!
 
-## [Ceph](https://ceph.com)
+## [Ceph](https://ceph.com) (owned by Red Hat)
 ### Pro:
 - redundant local and remote storage
+- CephFS was merged into the Linux kernel in 2010
 ### Contra:
 - not content-addressable
 - no native access controll/sharing
+- Ceph uses CRUSH hashing to automatically manage data placement, which is efficient to locate the data. But the data has to be placed according to the CRUSH algorithm. Any wrong configuration would cause data loss. Topology changes, such as adding new servers to increase capacity, will cause data migration with high IO cost to fit the CRUSH algorithm.
+
 ## [Keybase fs](https://book.keybase.io/docs/files/details) 
 ### Pro:
 - simple global namespace, like '/keybase/public/writer1name,writer2name/' or '/keybase/private/writername#readername/'
@@ -64,7 +67,6 @@ Write-only storage
 ## [Git-annex](https://git-annex.branchable.com)
 ### Pro:
 - git-based
-- 
 ### Contra:
 
 Abandoned
@@ -74,15 +76,17 @@ Abandoned
 - [DedupFS](https://github.com/xolox/dedupfs)
 - [archivefs](https://github.com/tmbdev-archive/archivefs)
 - [gpgfs](https://github.com/datapartyjs/gpgfs)
-- 
+- [noms](https://github.com/attic-labs/noms/)
+- [freehold](https://github.com/timshannon/freehold)(probably non content-addressable, just private file storage)
 
 Promising:
 - [Bup](https://bup.github.io/)
-- [Tahoe-LAFS](https://tahoe-lafs.org/trac/tahoe-lafs)
+- [Tahoe-LAFS](https://tahoe-lafs.org/trac/tahoe-lafs) Decentralized cloud storage system. Distributes data across multiple servers
 - [Borgbackup](https://www.borgbackup.org/)
 - [Restic](https://restic.net)
 - [libarchive](https://www.libarchive.org/)
 - [storj](https://www.storj.io/)
+- [dolt](https://github.com/dolthub/dolt) noms fork, drop-in MySQL replacement, but versioned
 
 Used before:
 - Unison
@@ -91,6 +95,22 @@ Used before:
 - rsync
 - Dropbox
 
+Distributed file storage:
+- [sia](https://sia.tech)
+- [storj](https://www.storj.io/)
+ - [skynet](https://skynetlabs.com)
+
 Abandoned CAS projects:
 - https://bazil.org/
-- 
+
+See also
+- [git lfs](https://git-lfs.github.com)# Git extension for versioning large files
+- [filestash](https://www.filestash.app)web frontend to several storage backends
+- [freehold](https://github.com/timshannon/freehold)(probably non content-addressable, just private file storage)
+- [garage](https://garagehq.deuxfleurs.fr)distributed s3 implementation
+- [hdfs](https://www.bigdataschool.ru/wiki/hdfs)Hadoop Distributed File System
+- [glusterfs](https://www.gluster.org) (owned by Red Hat)
+
+Theory:
+[f4: Facebook’s Warm BLOB Storage System](https://www.usenix.org/system/files/conference/osdi14/osdi14-paper-muralidhar.pdf)
+[Facebook’s Tectonic Filesystem: Efficiency from Exascale](https://www.usenix.org/system/files/fast21-pan.pdf)
