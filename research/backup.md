@@ -15,6 +15,10 @@ Favorable system properties:
 - multiplatform
 	- especially mobile client (autouploader)!
 
+Possible software classes:
+- backup
+- distributed redundant FS
+
 ## [Ceph](https://ceph.com) (owned by Red Hat)
 ### Pro:
 - redundant local and remote storage
@@ -104,12 +108,15 @@ Abandoned CAS projects:
 - https://bazil.org/
 
 See also
+- [list of filesystems](https://en.wikipedia.org/wiki/List_of_file_systems)
 - [git lfs](https://git-lfs.github.com)# Git extension for versioning large files
 - [filestash](https://www.filestash.app)web frontend to several storage backends
 - [freehold](https://github.com/timshannon/freehold)(probably non content-addressable, just private file storage)
 - [garage](https://garagehq.deuxfleurs.fr)distributed s3 implementation
-- [hdfs](https://www.bigdataschool.ru/wiki/hdfs)Hadoop Distributed File System
+- [hdfs](https://www.bigdataschool.ru/wiki/hdfs)Hadoop Distributed File System (Open source GoogleFS clone)
 - [glusterfs](https://www.gluster.org) (owned by Red Hat)
+- [MinIO](https://min.io) FreeNAS и TrueNAS под капотом используют именно MinIO https://habr.com/ru/company/veeam/blog/517392/. Use several files per object - can hit inode limits
+- [moosefs](https://moosefs.com) spinoff of Gemius internet analytics. Semi-opensource: "We have never aimed to create a developers community, although your ideas, bug reports and wishes are carefully taken into account by our developers"
 
 Theory:
 [f4: Facebook’s Warm BLOB Storage System](https://www.usenix.org/system/files/conference/osdi14/osdi14-paper-muralidhar.pdf)
