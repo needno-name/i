@@ -93,6 +93,7 @@ Abandoned
 - [archivefs](https://github.com/tmbdev-archive/archivefs)
 - [gpgfs](https://github.com/datapartyjs/gpgfs)
 - [noms](https://github.com/attic-labs/noms/)
+- [bazil](https://bazil.org/)
 - [freehold](https://github.com/timshannon/freehold)(probably non content-addressable, just private file storage)
 
 Promising:
@@ -104,15 +105,10 @@ Promising:
 - [storj](https://www.storj.io/)
 - [dolt](https://github.com/dolthub/dolt) noms fork, drop-in MySQL replacement, but versioned
 
-
-
 Distributed file storage:
 - [sia](https://sia.tech)
 - [storj](https://www.storj.io/)
  - [skynet](https://skynetlabs.com)
-
-Abandoned CAS projects:
-- https://bazil.org/
 
 See also
 - [list of filesystems](https://en.wikipedia.org/wiki/List_of_file_systems)
@@ -121,10 +117,11 @@ See also
 - [freehold](https://github.com/timshannon/freehold)(probably non content-addressable, just private file storage)
 - [garage](https://garagehq.deuxfleurs.fr)distributed s3 implementation
 - [hdfs](https://www.bigdataschool.ru/wiki/hdfs)Hadoop Distributed File System (Open source GoogleFS clone)
-- [glusterfs](https://www.gluster.org) (owned by Red Hat) Provides replication, quotas, geo-replication, snapshots and bitrot detection
+- [glusterfs](https://www.gluster.org) (Red Hat) Provides replication, quotas, geo-replication, snapshots and bitrot detection
 - [MinIO](https://min.io) FreeNAS & TrueNAS use MinIO https://habr.com/ru/company/veeam/blog/517392/ (ru). Use several files per object - problem of lots of small files (LOSF)
 - [moosefs](https://moosefs.com) spinoff of Gemius internet analytics. Semi-opensource: "We have never aimed to create a developers community, although your ideas, bug reports and wishes are carefully taken into account by our developers"
-- [zenko](https://www.zenko.io/) unified API endpoint compatible with S3, support for multiple storage backends, full metadata search across all clouds, policy-based replication
+- [zenko](https://www.zenko.io/) s3 implementation, support for multiple storage backends, full metadata search across all clouds, policy-based replication
+- [seafile](https://www.seafile.com/)
 
 Theory:
 [Finding a needle in Haystack: Facebook’s photo storage](https://www.usenix.org/legacy/event/osdi10/tech/full_papers/Beaver.pdf)
